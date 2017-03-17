@@ -49,7 +49,7 @@ Success! Data written to: secret/hello
 * [Your First Secret](https://www.vaultproject.io/intro/getting-started/first-secret.html)
 * [Built-in Help](https://www.vaultproject.io/intro/getting-started/help.html)
 
-### Aller plus loin ? ###
+## Aller plus loin ? ##
 
 On peut faire tourner le Vault dans un conteneur (docker). Il y a une [image officielle](https://hub.docker.com/_/vault/)
 
