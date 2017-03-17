@@ -54,7 +54,7 @@ secret_key  lkWB2CfULm9P+AqLtylnu988iPJ3vk7R2nIpY4dz
 * [Secret Backends](https://www.vaultproject.io/intro/getting-started/secret-backends.html)
 * [Dynamic Secrets](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html)
 
-### Aller plus loin ? ###
+## Aller plus loin ? ##
 
 A part continuer avec [2. auth avec github](https://github.com/ebreton/atelier-vault/tree/master/2-auth%20avec%20github) ...Un docker AWS prêt à l'emploi ?
 
