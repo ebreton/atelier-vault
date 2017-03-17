@@ -56,7 +56,7 @@ secret_key  lkWB2CfULm9P+AqLtylnu988iPJ3vk7R2nIpY4dz
 
 ### Aller plus loin ? ###
 
-Un docker AWS prêt à l'emploi ?
+A part continuer avec [2. auth avec github](https://github.com/ebreton/atelier-vault/tree/master/2-auth%20avec%20github) ...Un docker AWS prêt à l'emploi ?
 
 Pourquoi pas, en utilisant par exemple :
 
