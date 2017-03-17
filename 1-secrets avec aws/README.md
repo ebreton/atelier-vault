@@ -53,3 +53,17 @@ secret_key  lkWB2CfULm9P+AqLtylnu988iPJ3vk7R2nIpY4dz
 
 * [Secret Backends](https://www.vaultproject.io/intro/getting-started/secret-backends.html)
 * [Dynamic Secrets](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html)
+
+### Aller plus loin ? ###
+
+Un docker AWS prêt à l'emploi ?
+
+Pourquoi pas, en utilisant par exemple :
+
+* docker-compose
+* notre fichier de conf pour la policy (qui sera placé dans un volume `/vault/config`)
+* des variables d'environnement pour les tokens AWS (`AWS_ACCESS_KEY`, `AWS_SECRET_KEY` and `AWS_REGION`)
+* un petit script.sh pour appeler les APIs de configuration de notre [backend AWS](https://www.vaultproject.io/docs/secrets/aws/index.html)
+
+```
+```
