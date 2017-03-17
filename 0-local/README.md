@@ -24,7 +24,7 @@ Mettez le dans votre `.../bin` repertoire-qui-va-bien (c-a-d dans votre PATH)
 
 Avec deux terminaux et une variable d'environnement, vous êtes en route.
 
-**côté serveur**
+Premier terminal pour le **côté serveur**
 ```
 $ vault server -dev
 ...
@@ -35,7 +35,7 @@ Root Token: 79bd8011-af5a-f147-557e-c58be4fedf6c
 
 Copiez-collez votre `Root token` quelque part, c'est ce qui vous permettra de redevenir admin lorsque vous jouerez avec l'authentification plus tard
 
-**côté client**
+Second terminal pour le **côté client**
 ```
 $ export VAULT_ADDR='http://127.0.0.1:8200'
 $ vault write secret/hello value=world
