@@ -12,7 +12,12 @@ Avec deux terminaux et une variable d'environnement, vous êtes en route.
 côté serveur
 $ vault server -dev
 ...
+Unseal Key: 2252546b1a8551e8411502501719c4b3
+Root Token: 79bd8011-af5a-f147-557e-c58be4fedf6c
+...
 ```
+
+Copiez-collez votre `Root token` quelque part, c'est ce qui vous permettra de redevenir admin lorsque vous jouerez avec l'authentification plus tard
 
 ```
 côté client
