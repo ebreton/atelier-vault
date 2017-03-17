@@ -13,6 +13,21 @@ Le tuto a une douzaine de pages, que j'ai regroupées en 4 étapes, chacune ayan
 2. auth avec github
 3. stockage avec consul
 
+### Pressé ? ###
+
+*saississez vos tokens [AWS](https://console.aws.amazon.com/iam/home#/security_credential), [GitHub](https://github.com/settings/tokens)*, et up up up
+
+```
+$ cp conf/variables.env.sample conf/variables.env && vi conf/variables.env
+...
+
+$ docker-compose up -d
+```
+
+### Curieux ? ###
+
+Alors, vous pouvez lire cette page jusqu'au bout, et enchainer sur le [0-local](https://github.com/ebreton/atelier-vault/tree/master/0-local)
+
 ### Comment je commence ? ###
 
 Avec
@@ -23,7 +38,7 @@ Avec
 
 ### Comment je vérifie que tout s'est bien passé ? ###
 
-à la fin, un [consul](https://www.hashicorp.com/products/consul/) tourne sur votre machine pour stocker vos secrets, et vous pouvez y acceder avec votre compte GitHub. Si vous avez accroché, vous pouvez créer des tokens à la volée grâce à EC2, car vous avez défini votre compte AWS comme backend des secrets.
+à la fin, un [consul](https://www.hashicorp.com/products/consul/) et un Vault tournent sur votre machine pour stocker/gérer vos secrets, et vous pouvez y acceder avec votre compte GitHub. Si vous avez accroché, vous pouvez créer des tokens à la volée grâce à EC2, car vous avez défini votre compte AWS comme backend des secrets.
 
 ## Aller plus loin ? ##
 
