@@ -60,6 +60,6 @@ Key Threshold: 3
 Unseal Progress: 1
 ```
 
-### Pages couvertes du tuto ###
+### Page couverte du tuto ###
 
 * [Deploy Vault](https://www.vaultproject.io/intro/getting-started/deploy.html)

@@ -6,7 +6,10 @@ Jusqu'à présent, vous utilisiez (sans le savoir?) l'utilisateur *root* qui vie
 
 Ce n'est pas... optimum.
 
-On va donc restreindre l'accès grâce à github.
+On va donc 
+
+1. créer des accès (tokens) pour nos amis
+2. utiliser github comme backend auth.
 
 ### A quoi ca sert ? ###
 

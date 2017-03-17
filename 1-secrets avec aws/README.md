@@ -30,13 +30,13 @@ Je ne vais pas répéter tout le tuto qui explique ca plus calmement, mais en gr
 
 ```
 $ vault mount aws
-Successfully mounted 'aws' at 'aws'!
+...
 $ vault write aws/config/root \
     access_key=AKIAI4SGLQPBX6CSENIQ \
     secret_key=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
-Success! Data written to: aws/config/root
+...
 $ vault write aws/roles/deploy policy=@policy.json
-Success! Data written to: aws/roles/deploy
+...
 ```
 
 Et voila! Vous pouvez maintenant générer vos clefs avec votre client (et server) Vault en vous appuyant sur Amazon
