@@ -48,3 +48,16 @@ Success! Data written to: secret/hello
 * [Starting the Server](https://www.vaultproject.io/intro/getting-started/dev-server.html)
 * [Your First Secret](https://www.vaultproject.io/intro/getting-started/first-secret.html)
 * [Built-in Help](https://www.vaultproject.io/intro/getting-started/help.html)
+
+### Aller plus loin ? ###
+
+On peut faire tourner le Vault dans un conteneur (docker). Il y a une [image officielle](https://hub.docker.com/_/vault/)
+
+
+```
+$ docker run --rm --cap-add=IPC_LOCK -p 8200:8200 vault
+...
+$ export VAULT_TOKEN=a1e37f91-a640-01d2-64d4-2abaf15c2497
+$ vault write secret/manu value=toto
+Success! Data written to: secret/manu
+```
