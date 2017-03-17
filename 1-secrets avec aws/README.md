@@ -2,24 +2,24 @@
 
 ### Seconde étape: AWS ###
 
-La première étape stocke vos secrets dans la mémoire... donc oui, si vous redémarré le serveur Vault (ou fermez votre termina). Gameover.
+La première étape stocke vos secrets dans la mémoire... donc oui, si vous redémarrez le serveur Vault (ou fermez votre terminal). Gameover.
 
 Vous avez un peu mieux à disposition en stockant dans un fichier (si vous avez suivi le tuto) mais ce n'est pas la panacée...
 
-On va donc passer sur les Amazon Web Services, qui en plus nous fournit des fonctionnalités sympas, genre générer pour nous un secret dynamiquement avec une date d'expiration.
+On va donc passer sur les Amazon Web Services, qui en plus nous fournissent des fonctionnalités sympas, genre : générer pour nous un secret dynamiquement avec une date d'expiration.
 
 A noter qu'on délocalise le stockage (ils appellent ça *backend*) mais le serveur tourne toujours en local.
 
 ### A quoi ca sert ? ###
 
-Et bien vos secrets 1) ne sont plus sur votre machine, ni dans la mémoire ni dans un fichier et 2) vous n'aurez plus de mots de passe toto1234, et 3) ils expirent automatiquement, et 4) ils sont générés par une API, donc manuellement ou automatiquement à votre bon vouloir.
+Et bien vos secrets 1) ne sont plus sur votre machine, ni dans la mémoire ni dans un fichier et 2) vous n'aurez plus de mots de passe *toto1234*, et 3) ils expirent automatiquement, et 4) ils sont générés par une API, donc manuellement ou automatiquement à votre bon vouloir.
 
 
 ### Comment on a fait pratiquement ? ###
 
 Je ne vais pas répéter tout le tuto qui [explique ca plus calmement](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html), mais en gros
 
-1. vous générer un token dans votre compte [AWS>Identification et sécurité](https://console.aws.amazon.com/iam/home#/security_credential)
+1. vous générez un token dans votre compte [AWS>Identification et sécurité](https://console.aws.amazon.com/iam/home#/security_credential)
 
 2. vous définissez un rôle, c-a-d les permissions IAM (système amazon) dans un fichier (par exemple policy.json)
 
