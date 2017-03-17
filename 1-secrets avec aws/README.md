@@ -10,6 +10,11 @@ On va donc passer sur les Amazon Web Services, qui en plus nous fournit des fonc
 
 A noter qu'on délocalise le stockage (ils appellent ça *backend*) mais le serveur tourne toujours en local.
 
+### A quoi ca sert ? ###
+
+Et bien vos secrets 1) ne sont plus sur votre machine, ni dans la mémoire ni dans un fichier et 2) vous n'aurez plus de mots de passe toto1234, et 3) ils expirent automatiquement, et 4) ils sont générés par une API, donc manuellement ou automatiquement à votre bon vouloir.
+
+
 ### Comment on a fait pratiquement ? ###
 
 Je ne vais pas répéter tout le tuto qui [explique ca plus calmement](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html), mais en gros
@@ -31,7 +36,7 @@ $ vault write aws/roles/deploy policy=@policy.json
 Success! Data written to: aws/roles/deploy
 ```
 
-Et voila! Vous pouvez maintenant générer vos clefs avec votre client (et server) Vault
+Et voila! Vous pouvez maintenant générer vos clefs avec votre client (et server) Vault en vous appuyant sur Amazon
 
 ```
 $ vault read aws/creds/deploy
@@ -40,8 +45,3 @@ lease_id    aws/creds/deploy/0d042c53-aa8a-7ce7-9dfd-310351c465e5
 access_key  AKIAJFN42DVCQWDHQYHQ
 secret_key  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
 ```
-
-### A quoi ca sert ? ###
-
-Et bien vos secrets 1) ne sont plus sur votre machine, ni dans la mémoire ni dans un fichier et 2) vous n'aurez plus de mots de passe toto1234, et 3) ils expirent automatiquement, et 4) ils sont générés par une API, donc manuellement ou automatiquement à votre bon vouloir.
-

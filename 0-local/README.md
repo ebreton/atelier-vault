@@ -2,6 +2,27 @@
 
 ### Première étape: local ###
 
+Vous allez faire tourner votre Vault en local (dans la mémoire même), de manière tout à fait non-sécurisée, et non-recommandée (pour une prod).
+
+### A quoi ca sert ? ###
+
+Surtout à jouer avec les commandes de bases, comme `vault write` et `vault read`
+
+```
+$ vault help
+...
+```
+
+Et avec la documentation en ligne de commande des API
+
+```
+$ vault path-help
+...
+```
+
+### Comment on a fait pratiquement ? ###
+
+
 Vous pouvez récupérer le binaire qui [correspond à votre machine](https://www.vaultproject.io/downloads.html). Il sert à la fois d'agent (client) et de serveur (serveur ;))
 
 Mettez le dans votre `.../bin` repertoire-qui-va-bien (c-a-d dans votre PATH)
@@ -26,19 +47,3 @@ $ vault write secret/hello value=world
 Success! Data written to: secret/hello
 ```
 
-
-### A quoi ca sert ? ###
-
-Surtout à jouer avec les commandes de bases, comme `vault write` et `vault read`
-
-```
-$ vault help
-...
-```
-
-Et avec la documentation en ligne de commande des API
-
-```
-$ vault path-help
-...
-```
