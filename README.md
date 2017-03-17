@@ -60,7 +60,7 @@ $ curl -X POST -H "X-Vault-Token:$VAULT_TOKEN" ...
 
 Alors, vous pouvez lire cette page jusqu'au bout, et enchainer sur le [0-local](https://github.com/ebreton/atelier-vault/tree/master/0-local)
 
-### Comment je commence ? ###
+### Et pour le tuto, comment je commence ? ###
 
 Avec
 
