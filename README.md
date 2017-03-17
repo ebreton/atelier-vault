@@ -13,15 +13,58 @@ Le tuto a une douzaine de pages, que j'ai regroupées en 4 étapes, chacune ayan
 2. auth avec github
 3. stockage avec consul
 
-### Pressé ? ###
+### Pressé ? (in progress) ###
 
-*saississez vos tokens [AWS](https://console.aws.amazon.com/iam/home#/security_credential), [GitHub](https://github.com/settings/tokens)*, et up up up
+**en cours de rédaction. pas encore bon**
+
+Créez vos tokens [AWS](https://console.aws.amazon.com/iam/home#/security_credential), [GitHub](https://github.com/settings/tokens), et go go go
 
 ```
 $ cp conf/variables.env.sample conf/variables.env && vi conf/variables.env
 ...
 
-$ docker-compose up -d
+$ echo "creating vault server..." > /dev/null
+
+$ docker-compose up -d && docker-compose logs --tail 40
+
+$ echo "initializing vault..."  > /dev/null
+
+$ curl \
+  -X PUT \
+  -d "{\"secret_shares\":1, \"secret_threshold\":1}" \
+  https://127.0.0.1:8200/v1/sys/init
+{
+  "root_token": "4f66bdfa-f5e4-209f-096c-6e01d863c145",
+  "keys_base64": [
+    "FwwsSzMysLgYAvJFrs+q5UfLMKIxC+dDFbP6YzyjzvQ="
+  ],
+  "keys": [
+    "170c2c4b3332b0b81802f245aecfaae547cb30a2310be74315b3fa633ca3cef4"
+  ]
+}
+
+$ echo "unsealing vault..." > /dev/null
+
+$ export VAULT_TOKEN=4f66bdfa-f5e4-209f-096c-6e01d863c145
+$ curl \
+    -X PUT \
+    -d '{"key": "FwwsSzMysLgYAvJFrs+q5UfLMKIxC+dDFbP6YzyjzvQ="}' \
+    http://127.0.0.1:8200/v1/sys/unseal
+{
+  "cluster_id": "1c2523c9-adc2-7f3a-399f-7032da2b9faf",
+  "cluster_name": "vault-cluster-9ac82317",
+  "version": "0.6.2",
+  "progress": 0,
+  "n": 1,
+  "t": 1,
+  "sealed": false
+}
+
+$ echo "enabling authentication...." > /dev/null
+
+$ curl -X POST -H "X-Vault-Token:$VAULT_TOKEN" ...
+
+
 ```
 
 ### Curieux ? ###
