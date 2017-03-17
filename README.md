@@ -6,6 +6,13 @@ Ce repo est construit à partir de l'Atelier de l'Innovation Innovante (AII) du 
 
 L'objectif était de mettre en place un Vault en suivant le [tutoriel](https://www.vaultproject.io/intro/getting-started/install.html), de voir si on aime, et si on peut l'utiliser plus loin...
 
+Le tuto a une douzaine de pages, que j'ai regroupées en 4 étapes, chacune ayant un objectif annoncé:
+
+0. local (prise en main)
+1. secrets avec aws
+2. auth avec github
+3. stockage avec consul
+
 ### Comment je commence ? ###
 
 Avec
@@ -17,3 +24,7 @@ Avec
 ### Comment je vérifie que tout s'est bien passé ? ###
 
 à la fin, un [consul](https://www.hashicorp.com/products/consul/) tourne sur votre machine pour stocker vos secrets, et vous pouvez y acceder avec votre compte GitHub. Si vous avez accroché, vous pouvez créer des tokens à la volée grâce à EC2, car vous avez défini votre compte AWS comme backend des secrets.
+
+## Aller plus loin ? ##
+
+A chaque étape, vous trouverez une section "Aller plus loin" ou je tente d'appliquer la leçon dans le monde docker...
