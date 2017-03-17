@@ -47,3 +47,9 @@ $ vault write secret/hello value=world
 Success! Data written to: secret/hello
 ```
 
+### Pages couvertes du tuto ###
+
+* [Install Vault](https://www.vaultproject.io/intro/getting-started/install.html)
+* [Starting the Server](https://www.vaultproject.io/intro/getting-started/dev-server.html)
+* [Your First Secret](https://www.vaultproject.io/intro/getting-started/first-secret.html)
+* [Built-in Help](https://www.vaultproject.io/intro/getting-started/help.html)

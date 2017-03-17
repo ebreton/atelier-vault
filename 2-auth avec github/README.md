@@ -55,7 +55,7 @@ with this token are listed below:
 default
 ```
 
-On a vu que les permissions sont pour l'instant régies par la *policy* `default`. On peut changer ça, par exemple avec le fichier acl.hcl. 
+On a vu que les permissions sont pour l'instant régies par la *policy* `default`. On peut changer ça, par exemple avec le fichier acl.hcl.
 
 ```
 $ vault policy-write secret acl.hcl
@@ -63,3 +63,8 @@ $ vault policy-write secret acl.hcl
 $ vault write auth/github/map/teams/default value=secret
 ...
 ```
+
+### Pages couvertes du tuto ###
+
+* [Authentication](https://www.vaultproject.io/intro/getting-started/authentication.html)
+* [ACLs](https://www.vaultproject.io/intro/getting-started/acl.html)

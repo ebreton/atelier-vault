@@ -45,3 +45,8 @@ lease_id    aws/creds/deploy/0d042c53-aa8a-7ce7-9dfd-310351c465e5
 access_key  AKIAJFN42DVCQWDHQYHQ
 secret_key  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
 ```
+
+### Pages couvertes du tuto ###
+
+* [Secret Backends](https://www.vaultproject.io/intro/getting-started/secret-backends.html)
+* [Dynamic Secrets](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html)
