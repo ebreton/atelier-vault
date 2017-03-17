@@ -71,3 +71,7 @@ $ vault write auth/github/map/teams/default value=secret
 
 * [Authentication](https://www.vaultproject.io/intro/getting-started/authentication.html)
 * [ACLs](https://www.vaultproject.io/intro/getting-started/acl.html)
+
+## Aller plus loin ? ##
+
+Pour l'instant, vous pouvez continuer avec [3. auth avec github](https://github.com/ebreton/atelier-vault/tree/master/3-stockage%20avec%20consul) ...
