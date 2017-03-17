@@ -2,22 +2,25 @@
 
 ### Seconde étape: AWS ###
 
-La première étape stocke vos secrets dans la mémoire... donc oui, si vous redémarrez le serveur Vault (ou fermez votre terminal). Gameover.
+Dans la première étape, vous générez vos secrets avec vos petites mains pour vos utilisateurs préférés.
 
-Vous avez un peu mieux à disposition en stockant dans un fichier (si vous avez suivi le tuto) mais ce n'est pas la panacée...
+A l'ancienne.
 
-On va donc passer sur les Amazon Web Services, qui en plus nous fournissent des fonctionnalités sympas, genre : générer pour nous un secret dynamiquement avec une date d'expiration.
+```
+$ vault write secret/manu value=toto
+...
+```
 
-A noter qu'on délocalise le stockage (ils appellent ça *backend*) mais le serveur tourne toujours en local.
+On va donc passer sur les Amazon Web Services, vont générer pour nous un secret dynamiquement, avec une date d'expiration.
 
 ### A quoi ca sert ? ###
 
-Et bien vos secrets 1) ne sont plus sur votre machine, ni dans la mémoire ni dans un fichier et 2) vous n'aurez plus de mots de passe *toto1234*, et 3) ils expirent automatiquement, et 4) ils sont générés par une API, donc manuellement ou automatiquement à votre bon vouloir.
+Et bien vos secrets 1) n'auront plus de valuer *toto*, et 2) ils expirent automatiquement, et 3) ils sont générés par une API, donc manuellement ou automatiquement à la demande.
 
 
 ### Comment on a fait pratiquement ? ###
 
-Je ne vais pas répéter tout le tuto qui [explique ca plus calmement](https://www.vaultproject.io/intro/getting-started/dynamic-secrets.html), mais en gros
+Je ne vais pas répéter tout le tuto qui explique ca plus calmement, mais en gros:
 
 1. vous générez un token dans votre compte [AWS>Identification et sécurité](https://console.aws.amazon.com/iam/home#/security_credential)
 
