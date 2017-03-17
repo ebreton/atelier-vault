@@ -6,7 +6,7 @@ Jusqu'à présent, vous utilisiez (sans le savoir?) l'utilisateur *root* qui vie
 
 Ce n'est pas... optimum.
 
-On va donc 
+On va donc
 
 1. créer des accès (tokens) pour nos amis
 2. utiliser github comme backend auth.
@@ -17,7 +17,7 @@ Restreindre l'accès (authentication) et contrôler les permissions (authorisati
 
 ### Comment on a fait pratiquement ? ###
 
-On crée, on tue et on utilise des *tokens* pour utiliser Vault
+On crée, on tue et on utilise des *tokens* avec le backend des secrets qui vient par défaut avec Vault.
 
 ```
 $ vault token-create
