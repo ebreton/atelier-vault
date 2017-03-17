@@ -51,7 +51,7 @@ Success! Data written to: secret/hello
 
 ## Aller plus loin ? ##
 
-On peut faire tourner le Vault dans un conteneur (docker). Il y a une [image officielle](https://hub.docker.com/_/vault/)
+A part regarder l'étape suivante ([1. secrets avec aws](https://github.com/ebreton/atelier-vault/tree/master/1-secrets%20avec%20aws))... On peut faire tourner le Vault dans un conteneur (docker). Il y a une [image officielle](https://hub.docker.com/_/vault/)
 
 
 ```
