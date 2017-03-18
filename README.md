@@ -6,7 +6,9 @@ Ce repo est construit à partir de l'Atelier de l'Innovation Innovante (AII) du 
 
 L'objectif était de mettre en place un Vault en suivant le [tutoriel](https://www.vaultproject.io/intro/getting-started/install.html), de voir si on aime, et si on peut l'utiliser plus loin...
 
-Le tuto a une douzaine de pages, que j'ai regroupées en 4 étapes, chacune ayant un objectif annoncé:
+Le tuto a une douzaine de pages, dont j'ai tiré la quintescense substance dans 4 pages du wiki. 
+
+Vous trouverez les éléments de code de chaque étape dans les sous-répertoires suivant:
 
 0. local (prise en main)
 1. secrets avec aws
@@ -58,20 +60,9 @@ $ curl -X POST -H "X-Vault-Token:$VAULT_TOKEN" ...
 
 ### Curieux ? ###
 
-Alors, vous pouvez lire cette page jusqu'au bout, et enchainer sur le [0-local](https://github.com/ebreton/atelier-vault/tree/master/0-local)
+Alors, vous pouvez lire le [wiki](https://github.com/ebreton/atelier-vault/wiki)
 
-### Et pour le tuto, comment je commence ? ###
-
-Avec
-
-* une machine (un Mac dans mon cas)
-* un collègue pair-programmer
-* et le navigateur sur la [page du tuto](https://www.vaultproject.io/intro/getting-started/install.html)
-
-### Comment je vérifie que tout s'est bien passé ? ###
-
-à la fin, un [Consul](https://www.consul.io) et un Vault tournent sur votre machine pour stocker/gérer vos secrets, et vous pouvez y acceder avec votre compte GitHub. Si vous avez accroché, vous pouvez créer des tokens à la volée grâce à EC2, car vous avez défini votre compte AWS comme backend des secrets.
 
 ## Aller plus loin ? ##
 
-A chaque étape, vous trouverez une section "Aller plus loin" ou je tente d'appliquer la leçon dans le monde docker...
+A chaque étape, vous trouverez une section "Aller plus loin" ou je tente d'appliquer la leçon dans le monde docker... En attendant, direction [0-local](https://github.com/ebreton/atelier-vault/tree/master/0-local)
